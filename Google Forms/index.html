@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Simple Google Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(137, 233, 118);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        /* turns an element into a flex container. This means: Its direct children become flex items.these flex items are arranged in a row by default(horizontally) */
+        .form-container {
+            background-color:rgb(220, 235, 54);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%
+                /* .form-container will try to take 100% of its parent container's width */
+        }
+        h1{
+            margin-bottom:10px;
+            font-size:24px;
+            color:rgb(235, 29, 29);
+        }
+        p{
+            margin-bottom:20px;
+            color:#4cd010;
+        }
+        label{
+            display:block;
+            /* Take up the full width of their parent by default
+            Always start on a new line
+            Stack vertcally(one below the other) */
+            margin:10px 0 5px;
+            color:#ff00f2;
+        }
+        input,textarea{
+            background-color: #a2e9f1;
+            color:black;
+            width:100%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:6px;
+            margin-bottom:15px;
+            font-size:14px;
+        }
+        button{
+         background-color:#f442a4;
+         color:white;
+         padding:12px 20px;
+         border:none;
+         border-radius:6px;
+         cursor:pointer;
+         font-size:16px;
+        }
+        button:hover{
+            background-color:#ff00f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Feedback Form</h1>
+        <p>Please fill out the form below:</p>
+
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" column="2" placeholder="Your message..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

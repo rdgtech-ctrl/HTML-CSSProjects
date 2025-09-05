@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    /*Tells the the browser to include padding and border inside the element's total width and height*/
+    /*Total width stays exactly px .The content area shrinks to make space for padding and border*/
+    /*In this case elements like div,p,etc will stretch to 100% of the parent width and height by default*/
+    /*Box-sizing:border-box;still ensures that padding and border don't increase the element's total width and height.*/
+    font-family:Arial,sans-serif;
+}
+body{
+    background-color: black;
+    color:white;
+
+}
+.main{
+    position:relative;
+    height:100vh;
+    background:url("netflix.webp") no-repeat center center;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between ;
+}
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index:1;
+}
+nav{
+    z-index:2;
+    padding:20px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    /*align-items center them vertically*/
+}
+.logo{
+    width:120px;
+}
+.nav-buttons button{
+    background: rgba(255, 0, 0, 0.64);
+    color:white;
+    padding:10px 20px;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    border-radius:4px;
+}
+.content{
+    z-index:2;
+    position: relative;
+}

@@ -1,0 +1,206 @@
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background-color:#0d0d0d;
+    color:white;
+    /*It;s useful for headers or navbars that should stay at the top while scrolling but only within their parent container.  */
+    position:sticky;
+    top:0;
+    /*This tells the sticky element to stick to the top of the viewport when scrolling down*/
+    z-index:100;
+    /*Means it appears on top of elements with lower values.Makes sure your sticky element is not hidden behind other elements*/
+}
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#00bcd4;
+}
+.nav a{
+    margin-left:30px;
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+    transition:color 0.3s ease;
+}
+.nav a:hover {
+    color:#00bcd4;
+}
+.hero{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Vertically centered inside the container*/
+    padding:80px 40px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color:white;
+    flex-wrap:wrap;
+}
+.hero-text{
+    flex: 1;
+    /* Grow to fill availabe space(evenly) shrink if needed start with 0 width, then grow as needed 
+    No need to set exact widths..
+    Items resize based on container space */
+    min-width:300px;
+}
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#ccc;
+}
+.btn-hero{
+    padding:12px 28px;
+    background-color:#00bcd4;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:8px;
+    transition:background-color 0.3s ease;
+}
+.btn-hero:hover{
+    background-color: #26d1e8;
+}
+.hero-image{
+    flex:1;
+    text-align:center;
+    /* This centers the text (or inline content) horizontally inside its parent block */
+    min-width:300px;
+}
+.hero-image img{
+    max-width:100%;
+    height:auto;
+    border-radius:10px;
+}
+.features{
+    padding: 60px 40px;
+    background-color:#111;
+    color:white;
+    text-align:center;
+}
+.features h2{
+    font-size:36px;
+    margin-bottom:40px;
+}
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,min(250px,1fr));
+    /* auto-fit:Fills the row with as many columns as possible that fit the space */
+    /*Each column is min 250px, can grow*/
+    /*repeat(..,...) Repeat the column layout pattern*/
+    gap: 30px;
+}
+.feature-card{
+    background-color:#1f1f1f;
+    padding:20px;
+    border-radius: 12px;
+    box-shadow: 0px  0px 15px rgba(0, 0, 0, 0.996);
+    transition:transform 0.3 ease,background-color 0.3s
+}
+.feature-card:hover{
+    transform:translateY(-5px);
+    background-color:#2a2a2a;
+}
+.feature-card h3{
+    color:#00bcd4;
+    margin-bottom:10px;
+}
+.pricing{
+    padding:60px 40px;
+    background-color:#181818;
+    color:white;
+    text-align:center;
+}
+.pricing h2 {
+    font-size:36px;
+    margin-bottom:40px;
+}
+.pricing-cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    /*when grid is applied to the parent div only the direct element of the class will be affected by grid properties*/
+    gap:30px;
+}
+.price-card{
+    background-color:#1f1f1f;
+    padding:30px 20px;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(0,0,0,0.2) ;
+    transition:transform 0.3s ease;
+}
+.price-card:hover{
+    transform: scale(1.03);
+    /*Resizes the element(both width & height) 1.03 Makes the element 103% of its size that is 3% bigger*/
+}
+.price-card h3{
+    font-size:24px;
+    color:#00bcd4;
+    margin-bottom:10px;
+}
+.price{
+    font-size:28px;
+    font-weight:bold;
+    color:#e50914;
+    margin:15px 0;
+}
+.price-card ul{
+    list-style:none;
+    padding:0;
+    margin-bottom:20px;
+}
+.price-card ul li{
+    margin:8px 0;
+}
+.btn-price{
+    margin-top:5px;
+    padding:10px 20px;
+    background-color:#00bcd4;
+    color:black;
+    text-decoration: none;
+    font-weight:bold;
+    transition:background-color 0.3 ease;
+}
+.btn-price:hover{
+    background-color: #26d1e8;
+}
+.cta{
+   background:linear-gradient(to right, #00bbd4, #2195f333);
+   color:black;
+   text-align:center;
+   padding:80px 40px;
+   border-radius:12px;
+   margin:100px 40px;
+}
+.cta h2{
+    font-size:36px;
+    margin-bottom:20px;
+    margin-top:-60px;
+}
+.cta p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+.cta-btn{
+    padding:14px 30px;
+    font-size:16px;
+    background-color: black;
+    color:white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition:background-color 0.3s ease;
+}
+.cta-btn:hover{
+    background-color: #1f1f1f;
+}
+.footer{
+    background-color: #0d0d0de6;
+    color:#888;
+    text-align: center;
+    padding:20px;
+    font-size:14px;
+    border-top:10px solid black;
+}
